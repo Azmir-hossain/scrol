@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<!--=======SCROLL TO TOP========-->
+    <div class="scrollTop-parent">
+            <div id="scrollTop">
+                <a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+            </div>
+        </div> 
+
+<!-- scroll css -->
+div#scrollTop {
+
+}
+
+div#scrollTop:hover {
+    transform: scale(1.2);
+}
+
+#scrollTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 5px;
+    /* color: #fff; */
+    transition: 0.3s;
+}
+#scrollTop i {
+    background:#6495ED;
+    border-radius: 50%;
+    color: #000;
+    font-size: 31px;
+    height: 46px;
+    line-height: inherit;
+    width: 47px;
+}
+#scrollTop.visible{
+    visibility:visible; opacity:.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+#scrollTop:hover{
+        color: #fff;
+}
+
+
+#scrollTop.visible{
+    visibility:visible; opacity:.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+
+<!-- custom js -->
+ /*---------------------------------------------*
+         * SCROLL TO TOP - ALL VIDEOS PAGE
+         ---------------------------------------------*/
+
+
+        jQuery("#scrollTop").click(function () {
+                jQuery("body,html").animate({
+                    scrollTop: 0
+                }, 600);
+            });
+            jQuery(window).scroll(function () {
+                if (jQuery(window).scrollTop() > 250) {
+                    jQuery("#scrollTop").addClass("visible");
+                } else {
+                    jQuery("#scrollTop").removeClass("visible");
+                }
+            });
+
+
+
+
+	
+</body>
+</html>
